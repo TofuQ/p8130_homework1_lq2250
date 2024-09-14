@@ -1,0 +1,243 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={p8130\_homework1\_lq2250},
+  pdfauthor={Lanlan\_Qing},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{p8130\_homework1\_lq2250}
+\author{Lanlan\_Qing}
+\date{2024-09-14}
+
+\begin{document}
+\maketitle
+
+This is homework 1 of Biostatistics P8130 The solutions are as follows:
+
+\section{Problem 1}\label{problem-1}
+
+\subsection{Codings}\label{codings}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Set score variable of bike crash}
+\NormalTok{score\_1 }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{45}\NormalTok{, }\DecValTok{39}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{47}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{99}\NormalTok{, }\DecValTok{74}\NormalTok{, }\DecValTok{37}\NormalTok{, }\DecValTok{99}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{59}\NormalTok{)}
+\NormalTok{score\_sample }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{(score\_1)}
+\CommentTok{\# Compute descriptive data of the first sample (bike crash)}
+\NormalTok{mean\_score1 }\OtherTok{=} \FunctionTok{mean}\NormalTok{(score\_1)}
+\NormalTok{median\_score1 }\OtherTok{=} \FunctionTok{median}\NormalTok{(score\_1)}
+\NormalTok{range\_score1 }\OtherTok{=} \FunctionTok{max}\NormalTok{(score\_1)}\SpecialCharTok{{-}}\FunctionTok{min}\NormalTok{(score\_1)}
+\NormalTok{sd\_score1 }\OtherTok{=} \FunctionTok{sd}\NormalTok{(score\_1)}
+\FunctionTok{summary}\NormalTok{(score\_1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    5.00   35.50   46.00   49.36   67.25   99.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Create box plot}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{ggplot}\NormalTok{(score\_sample, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{y =}\NormalTok{ score\_1))}\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{\textquotesingle{}Box Plot of Depression Scores\textquotesingle{}}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{\textquotesingle{}Score\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{homework1_lanlan_files/figure-latex/problem1-1.pdf}
+\#\# Answers \#\#\# (a) \textbf{Mean} = 49.36; \textbf{Median} = 46;
+\textbf{Range} = 94; \textbf{SD} = 28.85 \#\#\# (b) 1.According to the
+box plot and summary: -Minimum( the lower bound of whisker): 5 -Q1(the
+lower bound of the box): 35.5 -Median: 46 -Q3(the upper bound of the
+box): 67.25 -Maximum (the upper bound of whisker): 99 2.Distribution
+Description: -Score mean = 49 is higher than median = 46, indicating
+mean on the right side of the median. High values pull the distribution
+to the right side -Most data are concentrated on the lower half (on the
+left side of the median), -Suggest a right-skewed, non-symmetric and
+unimodal distribution
+
+\section{Problem 2}\label{problem-2}
+
+\subsection{Codings}\label{codings-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Set Set score variable of car crash}
+\NormalTok{score\_2 }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{67}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{85}\NormalTok{, }\DecValTok{43}\NormalTok{, }\DecValTok{64}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{47}\NormalTok{, }\DecValTok{97}\NormalTok{, }\DecValTok{58}\NormalTok{, }\DecValTok{58}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{56}\NormalTok{, }\DecValTok{50}\NormalTok{)}
+
+\CommentTok{\# Create a list of data used for creating box plot}
+\NormalTok{depression\_data }\OtherTok{=} \FunctionTok{list}\NormalTok{(}\StringTok{\textquotesingle{}Bike crash\textquotesingle{}} \OtherTok{=}\NormalTok{ score\_1,}
+            \StringTok{\textquotesingle{}Car crash\textquotesingle{}} \OtherTok{=}\NormalTok{ score\_2)}
+
+\CommentTok{\# Create a side{-}by{-}side box plot of samples}
+\NormalTok{box\_plot\_comparison }\OtherTok{=} \FunctionTok{boxplot}\NormalTok{(depression\_data, }\AttributeTok{main =} \StringTok{\textquotesingle{}Box Plot Comparison of Depression Samples\textquotesingle{}}\NormalTok{,}
+        \AttributeTok{xlab =} \StringTok{\textquotesingle{}Accident Type\textquotesingle{}}\NormalTok{,}
+        \AttributeTok{ylab =} \StringTok{\textquotesingle{}Depression Score\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{homework1_lanlan_files/figure-latex/problem2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Make a table of two sets of results}
+\NormalTok{table\_box\_plot }\OtherTok{=} \FunctionTok{cbind}\NormalTok{(}\FunctionTok{summary}\NormalTok{(score\_1), }\FunctionTok{summary}\NormalTok{(score\_2))}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Answers}\label{answers}
+
+\textbf{Description of box plots:} For bike crash accident: -Minimum(
+the lower bound of whisker): 5 -Q1(the lower bound of the box): 35.5
+-Median: 46 -Q3 (the upper bound of the box): 67.25 -Maximum (the upper
+bound of whisker): 99 For car crash accident: -Minimum( the lower bound
+of whisker): 10 -Q1(the lower bound of the box): 3547 -Median: 56
+-Q3(the upper bound of the box):64 -Maximum (the upper bound of
+whisker): 97
+
+\textbf{Description of the underlying distribution:} For bike crash
+accident: -It follows a right-skewed, non-symmetric and unimodal
+distribution without any outliers.
+
+For car crash accident: -It follows a relatively left-skewed
+distribution, as the mean is lower than the median, and the upper 25th
+percentile is larger than the lower 25th percentile, though the upper
+whisker is longer than the lower one, which might be influenced by the
+large extreme value. -It follows a non-symmetric and unimodal
+distribution with 1 upper outlier and 1 lower outlier.
+
+\section{Problem 3}\label{problem-3}
+
+\subsection{Answers}\label{answers-1}
+
+\subsubsection{(a)}\label{a}
+
+A = \{2,4,6,8,10,12\} P(A) = 6/12 = 1/2 \#\#\# (b) B = \{10\} P(B) =
+1/12 \#\#\# (c) Since B is the subset of A P(BUA) = P(A) = 1/2 \#\#\#
+(d) P(A intersect B) = P(A) + P(B) - P(AUB) = 1/2 + 1/12 - 1/2 = 1/12
+P(A)P(B) = 1/2*1/12 is not equal to 1/12, thus A and B are not
+independent.
+
+\section{Problem 4}\label{problem-4}
+
+\subsection{Answers}\label{answers-2}
+
+According to the text: P(de) = 0.05 P(+\textbar de) = 0.8 P(+\textbar no
+de) = 0.1 \#\# Codings
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p\_de }\OtherTok{=} \FloatTok{0.8}\SpecialCharTok{*}\FloatTok{0.05}\SpecialCharTok{/}\NormalTok{(}\FloatTok{0.8}\SpecialCharTok{*}\FloatTok{0.05+0.1}\SpecialCharTok{*}\FloatTok{0.95}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+P(de\textbar+) =
+{[}P(+\textbar de)*P(de){]}/{[}P(+\textbar de)*P(de)+P(+\textbar no
+de)*P(no de){]} = 0.2962963
+
+\end{document}
