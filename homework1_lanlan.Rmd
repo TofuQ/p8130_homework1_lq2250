@@ -2,9 +2,10 @@
 title: "p8130_homework1_lq2250"
 author: "Lanlan_Qing"
 date: "2024-09-14"
-output: html_document
+output: pdf_document
 ---
 This is homework 1 of Biostatistics P8130<br>
+
 The solutions are as follows:
 
 # Problem 1
@@ -119,15 +120,22 @@ table_box_plot
 
 **(a)**
 A = {2,4,6,8,10,12}<br>
+
 P(A) = 6/12 = 1/2<br>
+
 **(b)**
 B = {10}<br>
+
 P(B) = 1/12<br>
+
 **(c)**
 Since B is the subset of A<br>
+
 P(BUA) = P(A) = 1/2<br>
+
 **(d)**
 P(A intersect B) = P(A) + P(B) - P(AUB) = 1/2 + 1/12 - 1/2 = 1/12<br>
+
 P(A)P(B) = 1/2*1/12 is not equal to 1/12, thus A and B are not independent.
 
 # Problem 4
