@@ -10,8 +10,22 @@ The solutions are as follows:
 
 # Problem 1
 
-## Codings
-```{r problem1}
+## Answers
+
+**a)** qualitative ordinal<br>
+
+**b)** qualitative binary<br>
+
+**c)** qualitative nominal<br>
+
+**d)** quantitative continuous<br>
+
+**e)** quantitative discrete
+
+# Problem 2
+
+## Codings for the first question
+```{r Problem 2 Q1}
 # Set score variable of bike crash
 score_1 = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
 score_sample = data.frame(score_1)
@@ -54,10 +68,8 @@ ggplot(score_sample, aes(y = score_1))+
  
  - Suggest a right-skewed, non-symmetric and unimodal distribution
 
-# Problem 2
-
-## Codings
-```{r problem2}
+## Codings for the first question
+```{r Problem 1 Q2}
 # Set Set score variable of car crash
 score_2 = c(67, 50, 85, 43, 64, 35, 47, 97, 58, 58, 10, 56, 50)
 
