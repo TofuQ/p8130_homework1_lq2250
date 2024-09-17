@@ -38,16 +38,20 @@ summary(score_1)
 
 #Create box plot
 library(ggplot2)
-ggplot(score_sample, aes(y = score_1))+
+ggplot(score_sample, aes(x = score_1))+
   geom_boxplot()+
+  ylim(-1, 1)
   labs(title = 'Box Plot of Depression Scores',
-       y = 'Score')
+       x = 'Score')
 ```
 
 ## Answers
 **(a)**
+
 **Mean** = 49.36; **Median** = 46; **Range** = 94; **SD** = 28.85<br>
+
 **(b)**
+
 1.According to the box plot and summary:
 
  - Minimum( the lower bound of whisker): 5
@@ -67,8 +71,9 @@ ggplot(score_sample, aes(y = score_1))+
  - Most data are concentrated on the lower half (on the left side of the median)
  
  - Suggest a right-skewed, non-symmetric and unimodal distribution
+ 
 
-## Codings for the first question
+## Codings for the second question
 ```{r Problem 1 Q2}
 # Set Set score variable of car crash
 score_2 = c(67, 50, 85, 43, 64, 35, 47, 97, 58, 58, 10, 56, 50)
@@ -88,6 +93,9 @@ table_box_plot
 ```
 
 ## Answers
+
+**(b)**
+
 **Description of box plots:**<br>
 
 1.For bike crash accident: 
@@ -124,7 +132,10 @@ table_box_plot
 
  - It follows a relatively left-skewed distribution, as the mean is lower than the median, and the upper 25th percentile is larger than the lower 25th percentile, though the upper whisker is longer than the lower one, which might be influenced by the large extreme value.
  
- - It follows a non-symmetric and unimodal distribution with 1 upper outlier and 1 lower outlier.
+ - It follows a non-symmetric and unimodal distribution with 1 upper outlier and 1 lower outlier.<br>
+ 
+ **(c)**
+The bike group appears to have a lower typical depression score.
  
 # Problem 3
 
